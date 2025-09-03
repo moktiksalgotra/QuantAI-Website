@@ -39,9 +39,7 @@ const AppRoutes = ({ onContentLoad }: AppRoutesProps) => {
         <Route path="/services" element={<><Hero /><Domains /><Services/> </>} />
         
         {/* Career Routes */}
-        <Route path="/career">
-          <Route path="opportunities" element={<Opportunities />} />
-        </Route>
+        <Route path="/career/opportunities" element={<Opportunities />} />
 
         {/* Redirect all other routes to home */}
         <Route path="*" element={<Hero />} />
