@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+
+/* Lato Font Classes */
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+/* Add smooth transitions for theme changes */
+:root {
+  --transition-duration: 0.3s;
+}
+
+* {
+  transition: background-color var(--transition-duration), border-color var(--transition-duration);
+}
+
+/* Remove padding to eliminate white space */
+body {
+  overflow-x: hidden;
+  padding-top: 0; /* Removed padding that was creating white space */
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Custom styles for the header component */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Basic styling for links */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Space for content below header */
+main {
+  min-height: calc(100vh - 64px);
+}
+
+/* Spotlight animation */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlight 2s ease .75s 1 forwards;
+}
+
+/* Google-style loader - dots animation */
+.google-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-loader .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: google-bounce 1.4s ease-in-out infinite both;
+}
+
+.google-loader .dot:nth-child(1) {
+  background-color: #8b9c9c;
+  animation-delay: -0.32s;
+}
+
+.google-loader .dot:nth-child(2) {
+  background-color: #eaa990;
+  animation-delay: -0.16s;
+}
+
+.google-loader .dot:nth-child(3) {
+  background-color: #1d3d3c;
+  animation-delay: 0s;
+}
+
+
+
+@keyframes google-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apple-style loader for Spline */
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #6b7280;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: apple-spin 1s linear infinite;
+}
+
+/* Dark mode loader */
+.dark .loader {
+  border-color: #374151;
+  border-top-color: #9ca3af;
+}
+
+/* Small Apple-style loader for buttons */
+.apple-loader-small {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #6b7280;
+  border-radius: 50%;
+  animation: apple-spin 1s linear infinite;
+}
+
+.dark .apple-loader-small {
+  border-color: #374151;
+  border-top-color: #9ca3af;
+}
